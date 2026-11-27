@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Library Management System - EXP2
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header class="top-header">
+
+    <div>
+
+        <h1>
+            LIBRARY MANAGEMENT SYSTEM
+        </h1>
+
+        <p>
+            Smart Library Storage Configuration
+        </p>
+
+    </div>
+
+
+    <div class="exp-badge">
+        EXP 02
+    </div>
+
+</header>
+
+
+
+<!-- =====================================================
+     MAIN CONTAINER
+===================================================== -->
+
+<div class="main-container">
+
+
+    <!-- =================================================
+         SIDEBAR
+    ================================================== -->
+
+    <aside class="sidebar">
+
+        <h2>
+            Library Configuration
+        </h2>
+
+
+        <!-- USER DETAILS -->
+
+        <section class="control-section">
+
+            <h3>
+                👤 User Details
+            </h3>
+
+
+            <label for="userName">
+                Full Name
+            </label>
+
+            <input
+                type="text"
+                id="userName"
+                placeholder="Enter your name"
+            >
+
+
+            <label for="userAge">
+                Age
+            </label>
+
+            <input
+                type="number"
+                id="userAge"
+                placeholder="Enter age"
+                min="1"
+                max="120"
+            >
+
+        </section>
+
+
+
+        <!-- CUPBOARD DIMENSIONS -->
+
+        <section class="control-section">
+
+            <h3>
+                📐 Cupboard Dimensions
+            </h3>
+
+
+            <div class="dimension-grid">
+
+
+                <div>
+
+                    <label>
+                        Width
+                    </label>
+
+                    <input
+                        type="number"
+                        id="width"
+                        value="120"
+                        min="30"
+                    >
+
+                    <small>
+                        cm
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Height
+                    </label>
+
+                    <input
+                        type="number"
+                        id="height"
+                        value="200"
+                        min="50"
+                    >
+
+                    <small>
+                        cm
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <label>
+                        Depth
+                    </label>
+
+                    <input
+                        type="number"
+                        id="depth"
+                        value="45"
+                        min="20"
+                    >
+
+                    <small>
+                        cm
+                    </small>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- STORAGE CONFIGURATION -->
+
+        <section class="control-section">
+
+            <h3>
+                🗄 Storage Layout
+            </h3>
+
+
+            <!-- CUPBOARDS -->
+
+            <div class="counter-row">
+
+                <span>
+                    Number of Cupboards
+                </span>
+
+
+                <div class="counter">
+
+                    <button
+                        type="button"
+                        onclick="changeValue('cupboards', -1)"
+                    >
+                        −
+                    </button>
+
+
+                    <span id="cupboardCount">
+                        1
+                    </span>
+
+
+                    <button
+                        type="button"
+                        onclick="changeValue('cupboards', 1)"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RACKS -->
+
+            <div class="counter-row">
+
+                <span>
+                    Racks / Cupboard
+                </span>
+
+
+                <div class="counter">
+
+                    <button
+                        type="button"
+                        onclick="changeValue('racks', -1)"
+                    >
+                        −
+                    </button>
+
+
+                    <span id="rackCount">
+                        4
+                    </span>
+
+
+                    <button
+                        type="button"
+                        onclick="changeValue('racks', 1)"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ROWS -->
+
+            <div class="counter-row">
+
+                <span>
+                    Rows / Rack
+                </span>
+
+
+                <div class="counter">
+
+                    <button
+                        type="button"
+                        onclick="changeValue('rows', -1)"
+                    >
+                        −
+                    </button>
+
+
+                    <span id="rowCount">
+                        3
+                    </span>
+
+
+                    <button
+                        type="button"
+                        onclick="changeValue('rows', 1)"
+                    >
+                        +
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- DOOR TYPE -->
+
+        <section class="control-section">
+
+            <h3>
+                🚪 Door Type
+            </h3>
+
+
+            <label class="radio-option">
+
+                <input
+                    type="radio"
+                    name="door"
+                    value="Lift Up"
+                >
+
+                <span>
+                    Lift Up
+                </span>
+
+            </label>
+
+
+            <label class="radio-option">
+
+                <input
+                    type="radio"
+                    name="door"
+                    value="Sliding"
+                    checked
+                >
+
+                <span>
+                    Sliding
+                </span>
+
+            </label>
+
+
+            <label class="radio-option">
+
+                <input
+                    type="radio"
+                    name="door"
+                    value="Hinged"
+                >
+
+                <span>
+                    Hinged
+                </span>
+
+            </label>
+
+        </section>
+
+
+
+        <!-- GENERATE -->
+
+        <button
+            type="button"
+            class="generate-btn"
+            onclick="generateLibrary()"
+        >
+
+            ⚙ Generate Cupboard
+
+        </button>
+
+
+    </aside>
+
+
+
+    <!-- =================================================
+         MAIN CONTENT
+    ================================================== -->
+
+    <main class="content">
+
+
+        <!-- WELCOME -->
+
+        <section class="welcome-card">
+
+            <div>
+
+                <span class="mini-label">
+                    EXPERIMENT 02
+                </span>
+
+
+                <h2>
+                    Smart Cupboard Designer
+                </h2>
+
+
+                <p>
+                    Configure your library storage
+                    and preview it before approval.
+                </p>
+
+            </div>
+
+
+            <div class="status">
+
+                <span class="status-dot"></span>
+
+                System Ready
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RECOMMENDATION
+        ================================================== -->
+
+        <section
+            id="recommendation"
+            class="recommendation hidden"
+        >
+
+            <div class="recommendation-icon">
+                💡
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Smart Recommendation
+                </h3>
+
+
+                <p id="recommendationText">
+                    Configure your cupboard.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             VISUALIZATION
+        ================================================== -->
+
+        <section class="visualization-card">
+
+
+            <div class="section-title">
+
+                <div>
+
+                    <span class="mini-label">
+                        LIVE PREVIEW
+                    </span>
+
+
+                    <h2>
+                        Cupboard Visualization
+                    </h2>
+
+                </div>
+
+
+                <div
+                    id="previewInfo"
+                    class="preview-info"
+                >
+                    No configuration generated
+                </div>
+
+            </div>
+
+
+
+            <!-- DIMENSIONS -->
+
+            <div
+                id="dimensionDisplay"
+                class="dimension-display hidden"
+            >
+
+                <span>
+                    Width:
+                    <b id="displayWidth">
+                        -
+                    </b>
+                    cm
+                </span>
+
+
+                <span>
+                    Height:
+                    <b id="displayHeight">
+                        -
+                    </b>
+                    cm
+                </span>
+
+
+                <span>
+                    Depth:
+                    <b id="displayDepth">
+                        -
+                    </b>
+                    cm
+                </span>
+
+            </div>
+
+
+
+            <!-- LIBRARY -->
+
+            <div
+                id="libraryArea"
+                class="library-area"
+            >
+
+                <div class="empty-state">
+
+                    <div class="empty-icon">
+                        🗄️
+                    </div>
+
+
+                    <h3>
+                        No Cupboard Generated
+                    </h3>
+
+
+                    <p>
+                        Enter the details and click
+                        "Generate Cupboard".
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================================
+             APPROVAL
+        ================================================== -->
+
+        <section class="approval-card">
+
+
+            <div class="approval-content">
+
+                <div class="approval-icon">
+                    ✓
+                </div>
+
+
+                <div>
+
+                    <h2>
+                        Final Approval
+                    </h2>
+
+
+                    <p>
+                        Review your configuration and
+                        approve it to save the data.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <button
+                id="approveBtn"
+                type="button"
+                class="approve-btn"
+                onclick="approveConfiguration()"
+                disabled
+            >
+
+                ✓ Approve & Save
+
+            </button>
+
+
+        </section>
+
+
+    </main>
+
+</div>
+
+
+
+<!-- =====================================================
+     SUCCESS MODAL
+===================================================== -->
+
+<div
+    id="successModal"
+    class="modal hidden"
+>
+
+
+    <div class="modal-box">
+
+
+        <div class="success-circle">
+            ✓
+        </div>
+
+
+        <h2>
+            Configuration Approved!
+        </h2>
+
+
+        <p>
+            Your user details and cupboard
+            configuration have been saved successfully.
+        </p>
+
+
+        <div class="saved-message">
+
+            Data saved successfully to
+
+            <strong>
+                user.json
+            </strong>
+
+        </div>
+
+
+        <button
+            type="button"
+            class="modal-btn"
+            onclick="closeModal()"
+        >
+            Continue
+        </button>
+
+
+    </div>
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

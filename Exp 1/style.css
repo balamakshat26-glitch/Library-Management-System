@@ -1,0 +1,1287 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Hide radio buttons */
+
+input[type="radio"] {
+    display: none;
+}
+
+
+/* =========================================
+   BODY
+========================================= */
+
+body {
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e8eef2,
+            #d7e0e5
+        );
+
+    color: #1f2933;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    height: 105px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b2533,
+            #174557
+        );
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 55px;
+
+    color: white;
+
+    box-shadow:
+        0 4px 20px
+        rgba(0, 0, 0, 0.25);
+}
+
+
+.logo-section {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+
+.logo-icon {
+    width: 58px;
+    height: 58px;
+
+    border: 2px solid #55d6c2;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color: #55d6c2;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+.logo-section h1 {
+    font-size: 25px;
+
+    letter-spacing: 3px;
+}
+
+
+.logo-section p {
+    margin-top: 7px;
+
+    color: #a9bdc7;
+}
+
+
+.system-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.system-status p {
+    margin-top: 5px;
+
+    color: #a9bdc7;
+}
+
+
+.status-dot {
+    width: 11px;
+    height: 11px;
+
+    display: inline-block;
+
+    background: #4ce0a5;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 15px
+        #4ce0a5;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.main-container {
+    display: flex;
+
+    min-height:
+        calc(100vh - 105px);
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 420px;
+
+    background: #f7fafb;
+
+    padding: 38px 34px;
+
+    box-shadow:
+        5px 0 20px
+        rgba(0, 0, 0, 0.08);
+}
+
+
+.small-heading {
+    color: #71808c;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    font-weight: bold;
+}
+
+
+.sidebar h2 {
+    margin-top: 10px;
+
+    color: #102f3d;
+
+    font-size: 28px;
+}
+
+
+.sidebar-text {
+    margin-top: 8px;
+
+    color: #71808c;
+}
+
+
+hr {
+    border: none;
+
+    border-top:
+        1px solid #d8e0e4;
+
+    margin: 30px 0;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.section-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.number-box {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #123442;
+
+    color: #5ee0ca;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+}
+
+
+.section-title h3 {
+    font-size: 21px;
+
+    color: #263842;
+}
+
+
+.label {
+    margin-top: 25px;
+
+    margin-bottom: 12px;
+
+    color: #50616b;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CUPBOARD COUNTER
+========================================= */
+
+.counter {
+    height: 52px;
+
+    display: flex;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+
+.counter label {
+    width: 70px;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    background: #123442;
+
+    color: #5ee0ca;
+
+    font-size: 28px;
+
+    transition: 0.3s;
+}
+
+
+.counter label:hover {
+    background: #1e5b6d;
+}
+
+
+.count-display {
+    flex: 1;
+
+    background: white;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-top:
+        1px solid #d8e0e4;
+
+    border-bottom:
+        1px solid #d8e0e4;
+}
+
+
+.count-display span {
+    display: none;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    color: #123442;
+}
+
+
+/* COUNT 1 */
+
+#count1:checked ~ .app .number1 {
+    display: block;
+}
+
+#count1:checked ~ .app .plus1 {
+    display: flex;
+}
+
+
+/* COUNT 2 */
+
+#count2:checked ~ .app .number2 {
+    display: block;
+}
+
+#count2:checked ~ .app .minus2 {
+    display: flex;
+}
+
+#count2:checked ~ .app .plus2 {
+    display: flex;
+}
+
+
+/* COUNT 3 */
+
+#count3:checked ~ .app .number3 {
+    display: block;
+}
+
+#count3:checked ~ .app .minus3 {
+    display: flex;
+}
+
+#count3:checked ~ .app .plus3 {
+    display: flex;
+}
+
+
+/* COUNT 4 */
+
+#count4:checked ~ .app .number4 {
+    display: block;
+}
+
+#count4:checked ~ .app .minus4 {
+    display: flex;
+}
+
+#count4:checked ~ .app .plus4 {
+    display: flex;
+}
+
+
+/* COUNT 5 */
+
+#count5:checked ~ .app .number5 {
+    display: block;
+}
+
+#count5:checked ~ .app .minus5 {
+    display: flex;
+}
+
+#count5:checked ~ .app .plus5 {
+    display: flex;
+}
+
+
+/* COUNT 6 */
+
+#count6:checked ~ .app .number6 {
+    display: block;
+}
+
+#count6:checked ~ .app .minus6 {
+    display: flex;
+}
+
+#count6:checked ~ .app .plus6 {
+    display: flex;
+}
+
+
+/* COUNT 7 */
+
+#count7:checked ~ .app .number7 {
+    display: block;
+}
+
+#count7:checked ~ .app .minus7 {
+    display: flex;
+}
+
+#count7:checked ~ .app .plus7 {
+    display: flex;
+}
+
+
+/* COUNT 8 */
+
+#count8:checked ~ .app .number8 {
+    display: block;
+}
+
+#count8:checked ~ .app .minus8 {
+    display: flex;
+}
+
+
+/* =========================================
+   OPTIONS
+========================================= */
+
+.option-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 10px;
+}
+
+
+.option-grid label {
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border:
+        1px solid #d6e0e5;
+
+    border-radius: 9px;
+
+    color: #4c5d66;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.option-grid label:hover {
+    background: #dff8f3;
+
+    border-color: #55d6c2;
+}
+
+
+/* SELECTED RACK */
+
+#rack1:checked ~ .app label[for="rack1"],
+#rack2:checked ~ .app label[for="rack2"],
+#rack3:checked ~ .app label[for="rack3"],
+#rack4:checked ~ .app label[for="rack4"] {
+    background: #123442;
+
+    color: #5ee0ca;
+
+    border-color: #123442;
+}
+
+
+/* SELECTED ROW */
+
+#row1:checked ~ .app label[for="row1"],
+#row2:checked ~ .app label[for="row2"],
+#row3:checked ~ .app label[for="row3"],
+#row4:checked ~ .app label[for="row4"] {
+    background: #123442;
+
+    color: #5ee0ca;
+
+    border-color: #123442;
+}
+
+
+/* =========================================
+   DOOR OPTIONS
+========================================= */
+
+.door-options {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+
+.door-options label {
+    height: 48px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border:
+        1px solid #d6e0e5;
+
+    border-radius: 9px;
+
+    cursor: pointer;
+
+    color: #4c5d66;
+
+    transition: 0.3s;
+}
+
+
+/* SELECTED DOOR */
+
+#lift:checked ~ .app label[for="lift"],
+#sliding:checked ~ .app label[for="sliding"],
+#hinged:checked ~ .app label[for="hinged"] {
+    background: #123442;
+
+    color: #5ee0ca;
+
+    border-color: #123442;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+    flex: 1;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e6eef2,
+            #d5e1e7
+        );
+}
+
+
+.content-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 45px;
+}
+
+
+.content-header h2 {
+    margin: 8px 0;
+
+    font-size: 32px;
+
+    color: #123442;
+}
+
+
+.content-header p {
+    color: #71808c;
+}
+
+
+.live {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 14px 22px;
+
+    border-radius: 30px;
+
+    background: white;
+
+    color: #123442;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   CUPBOARD GRID
+========================================= */
+
+.cupboard-display {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(300px, 1fr)
+        );
+
+    gap: 40px;
+}
+
+
+/* Hide all cupboards initially */
+
+.cupboard-wrapper {
+    display: none;
+
+    animation:
+        appear 0.6s ease;
+}
+
+
+/* CUPBOARD 01 ALWAYS */
+
+#count1:checked ~ .app .cupboard1,
+#count2:checked ~ .app .cupboard1,
+#count3:checked ~ .app .cupboard1,
+#count4:checked ~ .app .cupboard1,
+#count5:checked ~ .app .cupboard1,
+#count6:checked ~ .app .cupboard1,
+#count7:checked ~ .app .cupboard1,
+#count8:checked ~ .app .cupboard1 {
+    display: block;
+}
+
+
+/* SHOW MORE CUPBOARDS */
+
+#count2:checked ~ .app .cupboard2,
+#count3:checked ~ .app .cupboard2,
+#count4:checked ~ .app .cupboard2,
+#count5:checked ~ .app .cupboard2,
+#count6:checked ~ .app .cupboard2,
+#count7:checked ~ .app .cupboard2,
+#count8:checked ~ .app .cupboard2 {
+    display: block;
+}
+
+
+#count3:checked ~ .app .cupboard3,
+#count4:checked ~ .app .cupboard3,
+#count5:checked ~ .app .cupboard3,
+#count6:checked ~ .app .cupboard3,
+#count7:checked ~ .app .cupboard3,
+#count8:checked ~ .app .cupboard3 {
+    display: block;
+}
+
+
+#count4:checked ~ .app .cupboard4,
+#count5:checked ~ .app .cupboard4,
+#count6:checked ~ .app .cupboard4,
+#count7:checked ~ .app .cupboard4,
+#count8:checked ~ .app .cupboard4 {
+    display: block;
+}
+
+
+#count5:checked ~ .app .cupboard5,
+#count6:checked ~ .app .cupboard5,
+#count7:checked ~ .app .cupboard5,
+#count8:checked ~ .app .cupboard5 {
+    display: block;
+}
+
+
+#count6:checked ~ .app .cupboard6,
+#count7:checked ~ .app .cupboard6,
+#count8:checked ~ .app .cupboard6 {
+    display: block;
+}
+
+
+#count7:checked ~ .app .cupboard7,
+#count8:checked ~ .app .cupboard7 {
+    display: block;
+}
+
+
+#count8:checked ~ .app .cupboard8 {
+    display: block;
+}
+
+
+/* =========================================
+   CUPBOARD
+========================================= */
+
+.cupboard-wrapper h3 {
+    margin-bottom: 14px;
+
+    color: #33454f;
+
+    letter-spacing: 1px;
+}
+
+
+.cupboard {
+    height: 390px;
+
+    position: relative;
+
+    padding: 15px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2d5663,
+            #173641
+        );
+
+    border-radius: 8px;
+
+    perspective: 1000px;
+
+    box-shadow:
+        10px 12px 0 #12313b,
+        15px 20px 30px
+        rgba(0, 0, 0, 0.2);
+
+    overflow: visible;
+}
+
+
+/* =========================================
+   CUPBOARD INTERIOR
+========================================= */
+
+.interior {
+    width: 100%;
+    height: 100%;
+
+    background: #16323a;
+
+    padding: 12px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    border:
+        5px solid #0f2930;
+}
+
+
+.rack {
+    flex: 1;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 8px;
+
+    border-bottom:
+        5px solid #b58b54;
+
+    padding-bottom: 8px;
+}
+
+
+/* HIDE RACKS */
+
+#rack1:checked ~ .app .r2,
+#rack1:checked ~ .app .r3,
+#rack1:checked ~ .app .r4 {
+    display: none;
+}
+
+
+#rack2:checked ~ .app .r3,
+#rack2:checked ~ .app .r4 {
+    display: none;
+}
+
+
+#rack3:checked ~ .app .r4 {
+    display: none;
+}
+
+
+/* =========================================
+   ROW / COLUMN VISIBILITY
+========================================= */
+
+#row1:checked ~ .app .cell:nth-child(2),
+#row1:checked ~ .app .cell:nth-child(3),
+#row1:checked ~ .app .cell:nth-child(4) {
+    display: none;
+}
+
+
+#row2:checked ~ .app .cell:nth-child(3),
+#row2:checked ~ .app .cell:nth-child(4) {
+    display: none;
+}
+
+
+#row3:checked ~ .app .cell:nth-child(4) {
+    display: none;
+}
+
+
+/* =========================================
+   BOOK CELLS
+========================================= */
+
+.cell {
+    display: flex;
+
+    align-items: flex-end;
+    justify-content: center;
+
+    font-size: 32px;
+
+    min-width: 0;
+
+    border-left:
+        1px solid rgba(255,255,255,0.1);
+}
+
+
+/* =========================================
+   DOORS
+========================================= */
+
+.door {
+    position: absolute;
+
+    background:
+        linear-gradient(
+            135deg,
+            #315f70,
+            #173844
+        );
+
+    border:
+        4px solid #102e38;
+
+    z-index: 10;
+
+    transition:
+        transform 0.9s ease;
+
+    box-shadow:
+        inset 0 0 20px
+        rgba(255,255,255,0.05);
+}
+
+
+/* =========================================
+   SLIDING DOORS
+========================================= */
+
+.sliding-left {
+    width: 50%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+}
+
+
+.sliding-right {
+    width: 50%;
+    height: 100%;
+
+    right: 0;
+    top: 0;
+}
+
+
+/* =========================================
+   HINGED DOORS
+========================================= */
+
+.hinged-left {
+    width: 50%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+
+    transform-origin:
+        left center;
+}
+
+
+.hinged-right {
+    width: 50%;
+    height: 100%;
+
+    right: 0;
+    top: 0;
+
+    transform-origin:
+        right center;
+}
+
+
+/* =========================================
+   LIFT UP DOOR
+========================================= */
+
+.lift-door {
+    width: 100%;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+
+    transform-origin:
+        top center;
+}
+
+
+/* =========================================
+   HANDLES
+========================================= */
+
+.door span {
+    position: absolute;
+
+    width: 8px;
+    height: 60px;
+
+    background: #62d6c6;
+
+    top: 42%;
+
+    border-radius: 10px;
+}
+
+
+.sliding-left span,
+.hinged-left span {
+    right: 20px;
+}
+
+
+.sliding-right span,
+.hinged-right span {
+    left: 20px;
+}
+
+
+.lift-door span {
+    width: 75px;
+    height: 8px;
+
+    left: 50%;
+    top: auto;
+    bottom: 25px;
+
+    transform:
+        translateX(-50%);
+}
+
+
+/* =========================================
+   DEFAULT DOOR
+========================================= */
+
+.hinged-door,
+.lift-door {
+    display: none;
+}
+
+
+/* =========================================
+   SHOW HINGED DOORS
+========================================= */
+
+#hinged:checked ~ .app .hinged-door {
+    display: block;
+}
+
+
+#hinged:checked ~ .app .sliding-door {
+    display: none;
+}
+
+
+/* =========================================
+   SHOW LIFT DOOR
+========================================= */
+
+#lift:checked ~ .app .lift-door {
+    display: block;
+}
+
+
+#lift:checked ~ .app .sliding-door {
+    display: none;
+}
+
+
+/* =========================================
+   OPEN SLIDING DOORS
+========================================= */
+
+#sliding:checked ~ .app
+.cupboard:hover
+.sliding-left {
+    transform:
+        translateX(-102%);
+}
+
+
+#sliding:checked ~ .app
+.cupboard:hover
+.sliding-right {
+    transform:
+        translateX(102%);
+}
+
+
+/* =========================================
+   OPEN HINGED DOORS
+========================================= */
+
+#hinged:checked ~ .app
+.cupboard:hover
+.hinged-left {
+    transform:
+        rotateY(-115deg);
+}
+
+
+#hinged:checked ~ .app
+.cupboard:hover
+.hinged-right {
+    transform:
+        rotateY(115deg);
+}
+
+
+/* =========================================
+   OPEN LIFT DOOR
+========================================= */
+
+#lift:checked ~ .app
+.cupboard:hover
+.lift-door {
+    transform:
+        rotateX(-110deg);
+}
+
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes appear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 950px) {
+
+    .main-container {
+        flex-direction: column;
+    }
+
+
+    .sidebar {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .header {
+        height: auto;
+
+        padding: 20px;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+
+    .system-status {
+        display: none;
+    }
+
+
+    .logo-section h1 {
+        font-size: 16px;
+
+        letter-spacing: 1px;
+    }
+
+
+    .content {
+        padding: 25px 15px;
+    }
+
+
+    .content-header h2 {
+        font-size: 25px;
+    }
+
+
+    .live {
+        display: none;
+    }
+
+
+    .cupboard {
+        height: 350px;
+    }
+
+}
+
+/* =========================================================
+   CSS-ONLY RACK + / - COUNTER
+   ========================================================= */
+
+.rack-counter {
+    height: 52px;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.rack-counter label {
+    width: 70px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: #123442;
+    color: #5ee0ca;
+    font-size: 28px;
+    transition: 0.3s;
+}
+
+.rack-counter label:hover {
+    background: #1e5b6d;
+}
+
+.rack-counter .count-display {
+    flex: 1;
+}
+
+.rack-counter .count-display span {
+    display: none;
+}
+
+#rack1:checked ~ .app .rack-number1,
+#rack2:checked ~ .app .rack-number2,
+#rack3:checked ~ .app .rack-number3,
+#rack4:checked ~ .app .rack-number4 {
+    display: block;
+}
+
+#rack2:checked ~ .app .rack-minus-2,
+#rack3:checked ~ .app .rack-minus-3,
+#rack4:checked ~ .app .rack-minus-4 {
+    display: flex;
+}
+
+#rack1:checked ~ .app .rack-plus-1,
+#rack2:checked ~ .app .rack-plus-2,
+#rack3:checked ~ .app .rack-plus-3 {
+    display: flex;
+}
+
+/* =========================================================
+   MORE REALISTIC SLIDING / BYPASS DOORS
+   No JavaScript required.
+   ========================================================= */
+
+.cupboard {
+    overflow: hidden;
+}
+
+.sliding-door {
+    width: 53%;
+    height: 100%;
+    top: 0;
+    transition:
+        transform 0.85s cubic-bezier(.22,.75,.18,1),
+        box-shadow 0.85s ease;
+    backface-visibility: hidden;
+}
+
+.sliding-left {
+    left: 0;
+    z-index: 12;
+}
+
+.sliding-right {
+    right: 0;
+    z-index: 11;
+}
+
+/* The panels slide past one another and overlap,
+   like real bypass cupboard doors. */
+#sliding:checked ~ .app
+.cupboard:hover .sliding-left {
+    transform: translateX(96%);
+    z-index: 10;
+}
+
+#sliding:checked ~ .app
+.cupboard:hover .sliding-right {
+    transform: translateX(-2%);
+    z-index: 12;
+}
+
+/* Keep handles near the meeting edges. */
+.sliding-left span {
+    right: 16px;
+}
+
+.sliding-right span {
+    left: 16px;
+}
+

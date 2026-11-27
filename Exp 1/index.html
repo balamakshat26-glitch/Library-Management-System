@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Library Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- =========================================
+         CUPBOARD COUNT CONTROLS
+    ========================================== -->
+
+    <input type="radio" name="count" id="count1" checked>
+    <input type="radio" name="count" id="count2">
+    <input type="radio" name="count" id="count3">
+    <input type="radio" name="count" id="count4">
+    <input type="radio" name="count" id="count5">
+    <input type="radio" name="count" id="count6">
+    <input type="radio" name="count" id="count7">
+    <input type="radio" name="count" id="count8">
+
+
+    <!-- =========================================
+         RACK CONTROLS
+    ========================================== -->
+
+    <input type="radio" name="racks" id="rack1" checked>
+    <input type="radio" name="racks" id="rack2">
+    <input type="radio" name="racks" id="rack3">
+    <input type="radio" name="racks" id="rack4">
+
+
+     <!-- =========================================
+         ROW CONTROLS
+    ========================================== -->
+
+    <input type="radio" name="rows" id="row1" checked>
+    <input type="radio" name="rows" id="row2">
+    <input type="radio" name="rows" id="row3">
+    <input type="radio" name="rows" id="row4">
+
+
+    <!-- =========================================
+         DOOR TYPE CONTROLS
+    ========================================== -->
+
+    <input type="radio" name="door" id="lift">
+    <input type="radio" name="door" id="sliding" checked>
+    <input type="radio" name="door" id="hinged">
+
+
+    <div class="app">
+
+
+        <!-- =====================================
+             HEADER
+        ====================================== -->
+
+        <header class="header">
+
+            <div class="logo-section">
+
+                <div class="logo-icon">
+                    III
+                </div>
+
+                <div>
+                    <h1>LIBRARY MANAGEMENT SYSTEM</h1>
+
+                    <p>
+                        Smart Library Storage Console
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="system-status">
+
+                <span class="status-dot"></span>
+
+                <div>
+                    <strong>Library Storage System</strong>
+
+                    <p>System Ready</p>
+                </div>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================
+             MAIN CONTAINER
+        ====================================== -->
+
+        <div class="main-container">
+
+
+            <!-- =================================
+                 SIDEBAR
+            ================================== -->
+
+            <aside class="sidebar">
+
+                <p class="small-heading">
+                    CONFIGURATION
+                </p>
+
+                <h2>Library Cupboards</h2>
+
+                <p class="sidebar-text">
+                    Configure your complete library storage system.
+                </p>
+
+
+                <hr>
+
+
+                <!-- =================================
+                     CUPBOARD COUNT
+                ================================== -->
+
+                <div class="control-section">
+
+                    <div class="section-title">
+
+                        <span class="number-box">
+                            01
+                        </span>
+
+                        <h3>Cupboard Count</h3>
+
+                    </div>
+
+
+                    <p class="label">
+                        Number of Cupboards
+                    </p>
+
+
+                    <!-- COUNTER -->
+
+                    <div class="counter">
+
+
+                        <!-- MINUS BUTTONS -->
+
+                        <label for="count1" class="minus minus2">−</label>
+                        <label for="count2" class="minus minus3">−</label>
+                        <label for="count3" class="minus minus4">−</label>
+                        <label for="count4" class="minus minus5">−</label>
+                        <label for="count5" class="minus minus6">−</label>
+                        <label for="count6" class="minus minus7">−</label>
+                        <label for="count7" class="minus minus8">−</label>
+
+
+                        <!-- NUMBER DISPLAY -->
+
+                        <div class="count-display">
+
+                            <span class="number1">1</span>
+                            <span class="number2">2</span>
+                            <span class="number3">3</span>
+                            <span class="number4">4</span>
+                            <span class="number5">5</span>
+                            <span class="number6">6</span>
+                            <span class="number7">7</span>
+                            <span class="number8">8</span>
+
+                        </div>
+
+
+                        <!-- PLUS BUTTONS -->
+
+                        <label for="count2" class="plus plus1">+</label>
+                        <label for="count3" class="plus plus2">+</label>
+                        <label for="count4" class="plus plus3">+</label>
+                        <label for="count5" class="plus plus4">+</label>
+                        <label for="count6" class="plus plus5">+</label>
+                        <label for="count7" class="plus plus6">+</label>
+                        <label for="count8" class="plus plus7">+</label>
+
+
+                    </div>
+
+
+                    <p class="help-text">
+                        Use + and − to add or remove cupboards.
+                    </p>
+
+                </div>
+
+
+                <hr>
+
+
+                <!-- =================================
+                     COMMON OPERATOR
+                ================================== -->
+
+                <div class="control-section">
+
+                    <div class="section-title">
+
+                        <span class="number-box">
+                            02
+                        </span>
+
+                        <h3>Common Operator</h3>
+
+                    </div>
+
+
+                    <!-- RACKS -->
+
+                    <p class="label">
+                        Number of Racks
+                    </p>
+
+
+                    <div class="counter rack-counter">
+
+                        <label for="rack1" class="rack-minus rack-minus-2">−</label>
+                        <label for="rack2" class="rack-minus rack-minus-3">−</label>
+                        <label for="rack3" class="rack-minus rack-minus-4">−</label>
+
+                        <div class="count-display">
+                            <span class="rack-number1">1</span>
+                            <span class="rack-number2">2</span>
+                            <span class="rack-number3">3</span>
+                            <span class="rack-number4">4</span>
+                        </div>
+
+                        <label for="rack2" class="rack-plus rack-plus-1">+</label>
+                        <label for="rack3" class="rack-plus rack-plus-2">+</label>
+                        <label for="rack4" class="rack-plus rack-plus-3">+</label>
+
+                    </div>
+
+                    <p class="help-text">
+                        Use + and − to increase or decrease racks in every cupboard.
+                    </p>
+
+
+                    <!-- ROWS -->
+
+                    <p class="label">
+                        Number of Rows
+                    </p>
+
+
+                    <div class="option-grid">
+
+                        <label for="row1">
+                            1 Row
+                        </label>
+
+                        <label for="row2">
+                            2 Rows
+                        </label>
+
+                        <label for="row3">
+                            3 Rows
+                        </label>
+
+                        <label for="row4">
+                            4 Rows
+                        </label>
+
+                    </div>
+
+
+                    <!-- DOOR TYPE -->
+
+                    <p class="label">
+                        Door Type
+                    </p>
+
+
+                    <div class="door-options">
+
+                        <label for="lift">
+                            Lift Up
+                        </label>
+
+                        <label for="sliding">
+                            Sliding
+                        </label>
+
+                        <label for="hinged">
+                            Hinged
+                        </label>
+
+                    </div>
+
+                </div>
+
+
+            </aside>
+
+
+
+            <!-- =================================
+                 CONTENT AREA
+            ================================== -->
+
+            <main class="content">
+
+
+                <div class="content-header">
+
+                    <div>
+
+                        <p class="small-heading">
+                            VISUALIZATION
+                        </p>
+
+                        <h2>
+                            Library Storage Preview
+                        </h2>
+
+                        <p>
+                            Hover over any cupboard to open its doors.
+                        </p>
+
+                    </div>
+
+
+                    <div class="live">
+
+                        <span class="status-dot"></span>
+
+                        LIVE
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================
+                     CUPBOARD DISPLAY
+                ================================== -->
+
+                <div class="cupboard-display">
+
+
+                    <!-- CUPBOARD 01 -->
+
+                    <div class="cupboard-wrapper cupboard1">
+
+                        <h3>CUPBOARD 01</h3>
+
+                        <div class="cupboard">
+
+                            <div class="interior">
+
+                                <div class="rack r1">
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📗</div>
+                                </div>
+
+                                <div class="rack r2">
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📕</div>
+                                </div>
+
+                                <div class="rack r3">
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                </div>
+
+                                <div class="rack r4">
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                </div>
+
+                            </div>
+
+
+                            <!-- SLIDING DOORS -->
+
+                            <div class="door sliding-door sliding-left">
+                                <span></span>
+                            </div>
+
+                            <div class="door sliding-door sliding-right">
+                                <span></span>
+                            </div>
+
+
+                            <!-- HINGED DOORS -->
+
+                            <div class="door hinged-door hinged-left">
+                                <span></span>
+                            </div>
+
+                            <div class="door hinged-door hinged-right">
+                                <span></span>
+                            </div>
+
+
+                            <!-- LIFT UP DOOR -->
+
+                            <div class="door lift-door">
+                                <span></span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CUPBOARD 02 -->
+
+                    <div class="cupboard-wrapper cupboard2">
+
+                        <h3>CUPBOARD 02</h3>
+
+                        <div class="cupboard">
+
+                            <div class="interior">
+
+                                <div class="rack r1">
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📗</div>
+                                </div>
+
+                                <div class="rack r2">
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📕</div>
+                                </div>
+
+                                <div class="rack r3">
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                </div>
+
+                                <div class="rack r4">
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                </div>
+
+                            </div>
+
+                            <div class="door sliding-door sliding-left"><span></span></div>
+                            <div class="door sliding-door sliding-right"><span></span></div>
+
+                            <div class="door hinged-door hinged-left"><span></span></div>
+                            <div class="door hinged-door hinged-right"><span></span></div>
+
+                            <div class="door lift-door"><span></span></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CUPBOARD 03 -->
+
+                    <div class="cupboard-wrapper cupboard3">
+
+                        <h3>CUPBOARD 03</h3>
+
+                        <div class="cupboard">
+
+                            <div class="interior">
+
+                                <div class="rack r1">
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📗</div>
+                                </div>
+
+                                <div class="rack r2">
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📕</div>
+                                </div>
+
+                                <div class="rack r3">
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                </div>
+
+                                <div class="rack r4">
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                </div>
+
+                            </div>
+
+                            <div class="door sliding-door sliding-left"><span></span></div>
+                            <div class="door sliding-door sliding-right"><span></span></div>
+
+                            <div class="door hinged-door hinged-left"><span></span></div>
+                            <div class="door hinged-door hinged-right"><span></span></div>
+
+                            <div class="door lift-door"><span></span></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CUPBOARD 04 -->
+
+                    <div class="cupboard-wrapper cupboard4">
+
+                        <h3>CUPBOARD 04</h3>
+
+                        <div class="cupboard">
+
+                            <div class="interior">
+
+                                <div class="rack r1">
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📗</div>
+                                </div>
+
+                                <div class="rack r2">
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📕</div>
+                                </div>
+
+                                <div class="rack r3">
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                </div>
+
+                                <div class="rack r4">
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                </div>
+
+                            </div>
+
+                            <div class="door sliding-door sliding-left"><span></span></div>
+                            <div class="door sliding-door sliding-right"><span></span></div>
+
+                            <div class="door hinged-door hinged-left"><span></span></div>
+                            <div class="door hinged-door hinged-right"><span></span></div>
+
+                            <div class="door lift-door"><span></span></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CUPBOARD 05 -->
+
+                    <div class="cupboard-wrapper cupboard5">
+
+                        <h3>CUPBOARD 05</h3>
+
+                        <div class="cupboard">
+
+                            <div class="interior">
+
+                                <div class="rack r1">
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📗</div>
+                                </div>
+
+                                <div class="rack r2">
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📕</div>
+                                </div>
+
+                                <div class="rack r3">
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                </div>
+
+                                <div class="rack r4">
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                </div>
+
+                            </div>
+
+                            <div class="door sliding-door sliding-left"><span></span></div>
+                            <div class="door sliding-door sliding-right"><span></span></div>
+
+                            <div class="door hinged-door hinged-left"><span></span></div>
+                            <div class="door hinged-door hinged-right"><span></span></div>
+
+                            <div class="door lift-door"><span></span></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CUPBOARD 06 -->
+
+                    <div class="cupboard-wrapper cupboard6">
+
+                        <h3>CUPBOARD 06</h3>
+
+                        <div class="cupboard">
+
+                            <div class="interior">
+
+                                <div class="rack r1">
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📗</div>
+                                </div>
+
+                                <div class="rack r2">
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📕</div>
+                                </div>
+
+                                <div class="rack r3">
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                </div>
+
+                                <div class="rack r4">
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                </div>
+
+                            </div>
+
+                            <div class="door sliding-door sliding-left"><span></span></div>
+                            <div class="door sliding-door sliding-right"><span></span></div>
+
+                            <div class="door hinged-door hinged-left"><span></span></div>
+                            <div class="door hinged-door hinged-right"><span></span></div>
+
+                            <div class="door lift-door"><span></span></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CUPBOARD 07 -->
+
+                    <div class="cupboard-wrapper cupboard7">
+
+                        <h3>CUPBOARD 07</h3>
+
+                        <div class="cupboard">
+
+                            <div class="interior">
+
+                                <div class="rack r1">
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📗</div>
+                                </div>
+
+                                <div class="rack r2">
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📕</div>
+                                </div>
+
+                                <div class="rack r3">
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                </div>
+
+                                <div class="rack r4">
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                </div>
+
+                            </div>
+
+                            <div class="door sliding-door sliding-left"><span></span></div>
+                            <div class="door sliding-door sliding-right"><span></span></div>
+
+                            <div class="door hinged-door hinged-left"><span></span></div>
+                            <div class="door hinged-door hinged-right"><span></span></div>
+
+                            <div class="door lift-door"><span></span></div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CUPBOARD 08 -->
+
+                    <div class="cupboard-wrapper cupboard8">
+
+                        <h3>CUPBOARD 08</h3>
+
+                        <div class="cupboard">
+
+                            <div class="interior">
+
+                                <div class="rack r1">
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📗</div>
+                                </div>
+
+                                <div class="rack r2">
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                    <div class="cell">📕</div>
+                                </div>
+
+                                <div class="rack r3">
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                    <div class="cell">📘</div>
+                                </div>
+
+                                <div class="rack r4">
+                                    <div class="cell">📕</div>
+                                    <div class="cell">📗</div>
+                                    <div class="cell">📙</div>
+                                    <div class="cell">📚</div>
+                                </div>
+
+                            </div>
+
+                            <div class="door sliding-door sliding-left"><span></span></div>
+                            <div class="door sliding-door sliding-right"><span></span></div>
+
+                            <div class="door hinged-door hinged-left"><span></span></div>
+                            <div class="door hinged-door hinged-right"><span></span></div>
+
+                            <div class="door lift-door"><span></span></div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
