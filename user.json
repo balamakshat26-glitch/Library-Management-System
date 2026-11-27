@@ -1,0 +1,76 @@
+{
+    "users": [
+        {
+            "name": "Balam Akshat",
+            "age": 20,
+            "cupboard": {
+                "width_cm": 120,
+                "height_cm": 200,
+                "depth_cm": 45,
+                "number_of_cupboards": 2,
+                "racks_per_cupboard": 4,
+                "rows_per_rack": 3,
+                "door_type": "Sliding"
+            },
+            "recommended_racks": 4,
+            "approved": true,
+            "approved_at": "2026-09-08T12:09:26.355208",
+            "id": "2e221b90-3efe-4d25-8f8e-4bc871061b1f"
+        },
+        {
+            "name": "Akshat",
+            "age": 25,
+            "cupboard": {
+                "width_cm": 120,
+                "height_cm": 400,
+                "depth_cm": 45,
+                "number_of_cupboards": 2,
+                "racks_per_cupboard": 6,
+                "rows_per_rack": 3,
+                "door_type": "Hinged"
+            },
+            "recommended_racks": 6,
+            "approved": true,
+            "approved_at": "2026-09-08T13:06:30.106741",
+            "id": "be99f938-f053-4329-96f4-43a4f34500b5"
+        },
+        {
+            "name": "Akshat",
+            "age": 20,
+            "phone": "9381156045",
+            "email": "akshat.balam@gmail.com",
+            "cupboard": {
+                "width_cm": 20,
+                "height_cm": 20,
+                "depth_cm": 7,
+                "number_of_cupboards": 3,
+                "racks_per_cupboard": 1,
+                "rows_per_rack": 1,
+                "door_type": "Sliding"
+            },
+            "recommended_racks": 1,
+            "approved": true,
+            "id": "a4b18e6d-b97c-43c6-92f5-a92dcdd42fec",
+            "approved_at": "2026-10-07T07:14:37.809Z"
+        },
+        {
+            "id": "8f3f8d93-b0ab-4214-8653-c7f9fe310c17",
+            "name": "Akshat",
+            "age": 20,
+            "phone": "9381156045",
+            "email": "akshat.balam@gmail.com",
+            "cupboard": {
+                "width_cm": 120,
+                "height_cm": 200,
+                "depth_cm": 45,
+                "number_of_cupboards": 3,
+                "racks_per_cupboard": 4,
+                "rows_per_rack": 3,
+                "door_type": "Sliding"
+            },
+            "recommended_racks": 4,
+            "approved": true,
+            "approved_at": "2026-10-07T08:56:06.464Z"
+        }
+    ]
+}
