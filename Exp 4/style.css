@@ -1,0 +1,1660 @@
+/* =====================================================
+   LIBRARY MANAGEMENT SYSTEM - EXP2
+===================================================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --bg1: #e8eef2;
+    --bg2: #d7e0e5;
+
+    --navy: #0b2533;
+    --navy2: #174557;
+
+    --teal: #55d6c2;
+    --teal2: #5ee0ca;
+
+    --panel: #f7fafb;
+
+    --ink: #18323d;
+    --muted: #70818a;
+
+    --cab1: #2d5663;
+    --cab2: #173641;
+
+    --inside: #102b33;
+
+    --wood: #b58b54;
+
+    --door1: #315f70;
+    --door2: #173844;
+}
+
+
+body {
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    min-height: 100vh;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--bg1),
+            var(--bg2)
+        );
+
+    color: var(--ink);
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.top-header {
+
+    min-height: 82px;
+
+    padding: 0 35px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy2)
+        );
+
+    color: white;
+
+    box-shadow:
+        0 5px 20px rgba(0,0,0,.15);
+}
+
+
+.top-header h1 {
+
+    font-size: 23px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+}
+
+
+.top-header p {
+
+    color: #9fc4ca;
+
+    font-size: 13px;
+}
+
+
+.exp-badge {
+
+    padding: 9px 18px;
+
+    border-radius: 20px;
+
+    background: var(--teal);
+
+    color: var(--navy);
+
+    font-weight: 800;
+
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   MAIN
+===================================================== */
+
+.main-container {
+
+    display: grid;
+
+    grid-template-columns: 320px 1fr;
+
+    min-height:
+        calc(100vh - 82px);
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.sidebar {
+
+    padding: 25px;
+
+    background: var(--panel);
+
+    border-right:
+        1px solid #ccd8dc;
+
+    box-shadow:
+        5px 0 20px rgba(0,0,0,.05);
+}
+
+
+.sidebar > h2 {
+
+    margin-bottom: 20px;
+
+    color: var(--navy);
+
+    font-size: 19px;
+}
+
+
+.control-section {
+
+    padding: 17px;
+
+    margin-bottom: 15px;
+
+    background: white;
+
+    border:
+        1px solid #dce5e8;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 5px 15px rgba(20,50,60,.04);
+}
+
+
+.control-section h3 {
+
+    margin-bottom: 14px;
+
+    color: var(--navy);
+
+    font-size: 14px;
+}
+
+
+.control-section label {
+
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #53666d;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+.control-section input[type="text"],
+.control-section input[type="number"] {
+
+    width: 100%;
+
+    padding: 10px;
+
+    margin-bottom: 12px;
+
+    border:
+        1px solid #ccd9dd;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    color: var(--ink);
+
+    font-size: 13px;
+
+    transition: .2s;
+}
+
+
+.control-section input:focus {
+
+    border-color: var(--teal);
+
+    box-shadow:
+        0 0 0 3px rgba(85,214,194,.15);
+}
+
+
+/* =====================================================
+   DIMENSION GRID
+===================================================== */
+
+.dimension-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 8px;
+}
+
+
+.dimension-grid input {
+
+    padding: 8px !important;
+
+    margin-bottom: 3px !important;
+}
+
+
+.dimension-grid small {
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   COUNTERS
+===================================================== */
+
+.counter-row {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin: 13px 0;
+
+    color: #435a62;
+
+    font-size: 12px;
+}
+
+
+.counter {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.counter button {
+
+    width: 28px;
+
+    height: 28px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #e8f4f2;
+
+    color: var(--navy);
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+.counter button:hover {
+
+    background: var(--teal);
+
+    transform: scale(1.08);
+}
+
+
+.counter span {
+
+    min-width: 22px;
+
+    text-align: center;
+
+    color: var(--navy);
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   RADIO
+===================================================== */
+
+.radio-option {
+
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-bottom: 10px !important;
+
+    cursor: pointer;
+}
+
+
+.radio-option input {
+
+    accent-color: var(--teal);
+}
+
+
+/* =====================================================
+   GENERATE BUTTON
+===================================================== */
+
+.generate-btn {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--teal),
+            var(--teal2)
+        );
+
+    color: var(--navy);
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 18px rgba(60,180,160,.25);
+
+    transition: .25s;
+}
+
+
+.generate-btn:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 22px rgba(60,180,160,.35);
+}
+
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.content {
+
+    padding: 30px;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   WELCOME CARD
+===================================================== */
+
+.welcome-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 25px 28px;
+
+    margin-bottom: 20px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(30,60,70,.08);
+}
+
+
+.welcome-card h2 {
+
+    margin: 5px 0;
+
+    color: var(--navy);
+
+    font-size: 25px;
+}
+
+
+.welcome-card p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+}
+
+
+.mini-label {
+
+    color: #499c91;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1.5px;
+}
+
+
+.status {
+
+    padding: 9px 13px;
+
+    border-radius: 20px;
+
+    background: #edf9f6;
+
+    color: #318b7d;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.status-dot {
+
+    display: inline-block;
+
+    width: 7px;
+
+    height: 7px;
+
+    margin-right: 5px;
+
+    border-radius: 50%;
+
+    background: #3cc4a9;
+}
+
+
+/* =====================================================
+   RECOMMENDATION
+===================================================== */
+
+.recommendation {
+
+    display: flex;
+
+    gap: 15px;
+
+    padding: 17px 20px;
+
+    margin-bottom: 20px;
+
+    border:
+        1px solid #bde8df;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eefbf8,
+            #e4f5f2
+        );
+
+    animation:
+        slideDown .4s ease;
+}
+
+
+.recommendation-icon {
+
+    font-size: 27px;
+}
+
+
+.recommendation h3 {
+
+    margin-bottom: 5px;
+
+    color: var(--navy);
+
+    font-size: 15px;
+}
+
+
+.recommendation p {
+
+    color: #52676d;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+.hidden {
+
+    display: none !important;
+}
+
+
+@keyframes slideDown {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(-10px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =====================================================
+   VISUALIZATION
+===================================================== */
+
+.visualization-card {
+
+    padding: 25px;
+
+    margin-bottom: 20px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(30,60,70,.08);
+
+    overflow: hidden;
+}
+
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.section-title h2 {
+
+    margin-top: 4px;
+
+    color: var(--navy);
+
+    font-size: 20px;
+}
+
+
+.preview-info {
+
+    padding: 8px 13px;
+
+    border-radius: 20px;
+
+    background: #f0f5f6;
+
+    color: #60757c;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   DIMENSION DISPLAY
+===================================================== */
+
+.dimension-display {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 35px;
+
+    padding: 12px;
+
+    margin-bottom: 25px;
+
+    border-radius: 10px;
+
+    background: #f5f8f9;
+
+    color: var(--muted);
+
+    font-size: 12px;
+}
+
+
+.dimension-display b {
+
+    color: var(--navy);
+}
+
+
+/* =====================================================
+   LIBRARY AREA
+===================================================== */
+
+.library-area {
+
+    min-height: 430px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 35px;
+
+    border:
+        1px dashed #ccd9dd;
+
+    border-radius: 15px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #f8fbfc,
+            #edf2f4
+        );
+
+    overflow-x: auto;
+}
+
+
+.empty-state {
+
+    text-align: center;
+
+    color: var(--muted);
+}
+
+
+.empty-icon {
+
+    margin-bottom: 12px;
+
+    font-size: 50px;
+}
+
+
+.empty-state h3 {
+
+    margin-bottom: 7px;
+
+    color: var(--navy);
+}
+
+
+.empty-state p {
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   CUPBOARD CONTAINER
+===================================================== */
+
+.cupboard-container {
+
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(210px, 1fr)
+        );
+
+    align-items: end;
+
+    gap: 28px;
+
+    padding: 10px;
+}
+
+
+/* =====================================================
+   CUPBOARD
+===================================================== */
+
+.cupboard {
+
+    position: relative;
+
+    min-height: 310px;
+
+    padding: 17px 13px 13px;
+
+    border:
+        4px solid #224a57;
+
+    border-radius:
+        8px 8px 4px 4px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--cab1),
+            var(--cab2)
+        );
+
+    box-shadow:
+        0 15px 25px rgba(20,45,50,.25);
+
+    perspective: 1000px;
+
+    animation:
+        cupboardAppear .7s ease both;
+}
+
+
+@keyframes cupboardAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px)
+            scale(.94);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+/* =====================================================
+   CUPBOARD HEADER
+===================================================== */
+
+.cupboard-top {
+
+    margin-bottom: 9px;
+
+    text-align: center;
+
+    color: #b7d1d5;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+
+/* =====================================================
+   INTERIOR
+===================================================== */
+
+.cupboard-interior {
+
+    position: relative;
+
+    z-index: 2;
+
+    padding: 8px;
+
+    background: var(--inside);
+
+    border-radius: 3px;
+}
+
+
+/* =====================================================
+   RACK
+===================================================== */
+
+.rack {
+
+    position: relative;
+
+    height: 48px;
+
+    display: flex;
+
+    align-items: end;
+
+    gap: 3px;
+
+    padding:
+        0 5px 4px;
+
+    border-bottom:
+        4px solid var(--wood);
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   BOOKS
+===================================================== */
+
+.book {
+
+    width: 9px;
+
+    flex-shrink: 0;
+
+    border-radius:
+        2px 2px 0 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #e3c18b,
+            #a97942
+        );
+
+    box-shadow:
+        1px 0 2px rgba(0,0,0,.25);
+}
+
+
+.book:nth-child(1) {
+    height: 29px;
+}
+
+.book:nth-child(2) {
+    height: 35px;
+}
+
+.book:nth-child(3) {
+    height: 27px;
+}
+
+.book:nth-child(4) {
+    height: 38px;
+}
+
+.book:nth-child(5) {
+    height: 31px;
+}
+
+
+/* =====================================================
+   DOOR CONTAINER
+===================================================== */
+
+.doors {
+
+    position: absolute;
+
+    top: 32px;
+
+    right: 0;
+
+    bottom: 13px;
+
+    left: 0;
+
+    z-index: 20;
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   DOOR
+===================================================== */
+
+.door {
+
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 50%;
+
+    border:
+        1px solid #527b86;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--door1),
+            var(--door2)
+        );
+
+    box-shadow:
+        inset 0 0 20px rgba(0,0,0,.25),
+        0 5px 10px rgba(0,0,0,.15);
+
+    cursor: pointer;
+
+    pointer-events: auto;
+
+    transition:
+        transform .8s
+        cubic-bezier(.2,.8,.2,1),
+
+        opacity .5s ease,
+
+        box-shadow .3s ease;
+}
+
+
+.door:hover {
+
+    box-shadow:
+        inset 0 0 25px
+        rgba(85,214,194,.20),
+
+        0 8px 15px
+        rgba(0,0,0,.25);
+}
+
+
+.door-left {
+
+    left: 0;
+
+    transform-origin:
+        left center;
+}
+
+
+.door-right {
+
+    right: 0;
+
+    transform-origin:
+        right center;
+}
+
+
+/* =====================================================
+   HANDLE
+===================================================== */
+
+.handle {
+
+    position: absolute;
+
+    top: 50%;
+
+    width: 7px;
+
+    height: 38px;
+
+    border-radius: 5px;
+
+    background: var(--teal);
+
+    box-shadow:
+        0 0 8px
+        rgba(85,214,194,.5);
+
+    transform:
+        translateY(-50%);
+}
+
+
+.door-left .handle {
+
+    right: 10px;
+}
+
+
+.door-right .handle {
+
+    left: 10px;
+}
+
+
+/* =====================================================
+   LIFT UP
+===================================================== */
+
+.cupboard.open-lift
+.door-left {
+
+    transform:
+        translateY(-105%)
+        rotateX(18deg);
+
+    opacity: .85;
+}
+
+
+.cupboard.open-lift
+.door-right {
+
+    transform:
+        translateY(-105%)
+        rotateX(18deg);
+
+    opacity: .85;
+}
+
+
+/* =====================================================
+   SLIDING
+===================================================== */
+
+.cupboard.open-sliding
+.door-left {
+
+    transform:
+        translateX(96%);
+
+    z-index: 5;
+}
+
+
+.cupboard.open-sliding
+.door-right {
+
+    transform:
+        translateX(-96%);
+
+    z-index: 6;
+}
+
+
+/* =====================================================
+   HINGED
+===================================================== */
+
+.cupboard.open-hinged
+.door-left {
+
+    transform:
+        perspective(700px)
+        rotateY(-105deg);
+
+    transform-origin:
+        left center;
+
+    z-index: 5;
+}
+
+
+.cupboard.open-hinged
+.door-right {
+
+    transform:
+        perspective(700px)
+        rotateY(105deg);
+
+    transform-origin:
+        right center;
+
+    z-index: 5;
+}
+
+
+/* =====================================================
+   CUPBOARD LABEL
+===================================================== */
+
+.cupboard-label {
+
+    position: absolute;
+
+    right: 0;
+
+    bottom: -25px;
+
+    left: 0;
+
+    text-align: center;
+
+    color: #647980;
+
+    font-size: 10px;
+
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   APPROVAL CARD
+===================================================== */
+
+.approval-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 22px 25px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--navy),
+            var(--navy2)
+        );
+
+    color: white;
+
+    box-shadow:
+        0 12px 30px
+        rgba(10,35,48,.2);
+}
+
+
+.approval-content {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.approval-icon {
+
+    width: 45px;
+
+    height: 45px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 50%;
+
+    background:
+        rgba(85,214,194,.15);
+
+    color: var(--teal);
+
+    font-size: 23px;
+}
+
+
+.approval-card h2 {
+
+    margin-bottom: 4px;
+
+    font-size: 17px;
+}
+
+
+.approval-card p {
+
+    color: #9eb7be;
+
+    font-size: 11px;
+}
+
+
+.approve-btn {
+
+    padding: 13px 20px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: var(--teal);
+
+    color: var(--navy);
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+
+.approve-btn:not(:disabled):hover {
+
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 8px 18px
+        rgba(85,214,194,.3);
+}
+
+
+.approve-btn:disabled {
+
+    opacity: .4;
+
+    cursor: not-allowed;
+}
+
+
+/* =====================================================
+   MODAL
+===================================================== */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(5,25,34,.7);
+
+    backdrop-filter:
+        blur(5px);
+}
+
+
+.modal-box {
+
+    width: 400px;
+
+    max-width: 90%;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background: white;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.3);
+
+    animation:
+        modalPop .35s ease;
+}
+
+
+@keyframes modalPop {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            scale(.8);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+}
+
+
+.success-circle {
+
+    width: 65px;
+
+    height: 65px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: #e5f8f3;
+
+    color: #2eaa94;
+
+    font-size: 32px;
+
+    font-weight: bold;
+}
+
+
+.modal-box h2 {
+
+    margin:
+        18px 0 8px;
+
+    color: var(--navy);
+}
+
+
+.modal-box p {
+
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+.saved-message {
+
+    padding: 12px;
+
+    margin: 20px 0;
+
+    border-radius: 8px;
+
+    background: #f0f7f6;
+
+    color: #557078;
+
+    font-size: 12px;
+}
+
+
+.modal-btn {
+
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: var(--navy);
+
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .main-container {
+
+        grid-template-columns:
+            270px 1fr;
+    }
+
+    .content {
+
+        padding: 20px;
+    }
+
+}
+
+
+@media (max-width: 800px) {
+
+    .main-container {
+
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+
+        border-right: none;
+
+        border-bottom:
+            1px solid #ccd8dc;
+    }
+
+    .welcome-card {
+
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .approval-card {
+
+        align-items: stretch;
+
+        flex-direction: column;
+
+        gap: 18px;
+    }
+
+    .approve-btn {
+
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .top-header {
+
+        min-height: 75px;
+
+        padding: 0 15px;
+    }
+
+    .top-header h1 {
+
+        font-size: 15px;
+    }
+
+    .top-header p {
+
+        font-size: 10px;
+    }
+
+    .exp-badge {
+
+        padding: 7px 10px;
+
+        font-size: 10px;
+    }
+
+    .content {
+
+        padding: 12px;
+    }
+
+    .dimension-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+    .dimension-display {
+
+        flex-direction: column;
+
+        gap: 7px;
+
+        text-align: center;
+    }
+
+    .library-area {
+
+        padding: 15px;
+    }
+
+}
+
+/* =====================================================
+   EXP 3 CRUD PANEL
+===================================================== */
+
+.crud-card {
+    padding: 25px;
+    margin-bottom: 20px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(30,60,70,.08);
+}
+
+.crud-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+    margin-bottom: 18px;
+}
+
+.crud-grid label {
+    display: block;
+    margin-bottom: 6px;
+    color: #53666d;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.crud-grid input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccd9dd;
+    border-radius: 8px;
+    outline: none;
+}
+
+.crud-grid input:focus {
+    border-color: var(--teal);
+    box-shadow: 0 0 0 3px rgba(85,214,194,.15);
+}
+
+.crud-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.crud-btn {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 9px;
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.crud-btn.add { background: #d9f7dc; color: #1d6b2a; }
+.crud-btn.update { background: #dff4ff; color: #145a73; }
+.crud-btn.alter { background: #fff0cf; color: #805900; }
+.crud-btn.delete { background: #ffe1e1; color: #a32626; }
+.crud-btn.view { background: #e5f4ef; color: #206e60; }
+
+.records-output {
+    margin-top: 18px;
+    padding: 15px;
+    min-height: 100px;
+    max-height: 280px;
+    overflow: auto;
+    background: #102b33;
+    color: #d9f5ef;
+    border-radius: 10px;
+    font-size: 11px;
+    white-space: pre-wrap;
+}
+
+@media (max-width: 700px) {
+    .crud-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =====================================================
+   EXP 4 - UPDATE SUCCESS POPUP
+===================================================== */
+
+.thank-you {
+    margin: 0 0 15px;
+    color: var(--navy);
+    font-size: 20px;
+}
+
+.update-info {
+    padding: 14px;
+    margin: 0 0 20px;
+    border-radius: 8px;
+    background: #f0f7f6;
+    text-align: left;
+}
+
+.update-info p {
+    margin: 6px 0;
+    font-size: 14px;
+}
